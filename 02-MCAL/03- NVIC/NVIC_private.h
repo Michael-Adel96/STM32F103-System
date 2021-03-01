@@ -6,8 +6,7 @@
 #ifndef NVIC_PRIVATE_H
 #define NVIC_PRIVATE_H
 
-// base address 0xE000E100, 0xE000ED0C
-
+/* Register Difinition */
 #define NVIC_ISER0 		*((u32*)0xE000E100)
 #define NVIC_ISER1 		*((u32*)0xE000E104)
 #define NVIC_ICER0 		*((u32*)0xE000E180)
