@@ -1,9 +1,14 @@
 /********************************************/
 /* Author	: Michael Adel					*/
 /* Version	: V01							*/
-/* Date		: 07 Jan. 2021					*/
+/* Date		: 02 March. 2021    			*/
 /********************************************/
-#ifndef EXTI_CONFIG_H
-#define EXTI_CONFIG_H
+#ifndef STK_CONFIG_H
+#define STK_CONFIG_H
+
+/* Discription: Select STK clock Source */
+/* Range: => AHB                        */
+/*        => AHB_DIV_8                  */
+#define STK_CLK_SRC     AHB_DIV_8
 
 #endif
