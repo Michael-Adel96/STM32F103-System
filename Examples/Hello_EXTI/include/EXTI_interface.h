@@ -14,19 +14,17 @@
 /* 5. Enable the used EXTI line from NVIC (NVIC_Enable_Int(EXTI_x))     */
 /* 6. Set EXTI pin mode from GPIO (input pull up/down)                  */
 /* 7. Configure AFIO for the selected EXTI Line from GPIO API           */
-/* 8. Intialize EXTI (EXTI_Init())                                      */
-/* 9. Set Call back functions for each EXTI Line                        */
+/* 8. Set Call back functions for each EXTI Line                        */
+/* 9. Intialize EXTI (EXTI_Init())                                      */
 /* 10. Set Signal sense mode for each EXTI Line (Option A)              */
 /* 11. Enable EXTI Int. (Option A)                                      */
-/* NOTE_1 => user have to options to Enable/Disable EXTI Int and        */
+/* NOTE => user have to options to Enable/Disable EXTI Int and          */
 /*         Selecting Signal sense mode which are:                       */
 /*          A. Runtime method: Using normal API provided finctions in   */
 /*             EXTI_interface.h file.                                   */
 /*          B. Compilation time method: using configeration parameters  */
 /*             in EXTI_config.h file which is loaded when calling       */
 /*             EXTI_Init() function.                                    */
-/* NOTE_2 => Step 8 & 9, if the order is reversed, the ISR will run     */
-/*           NOP function not the intended function.                    */
 /************************************************************************/
 
 

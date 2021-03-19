@@ -13,7 +13,6 @@
 
 void GPIO_voidSetPinMode(u8 u8CopyPortId, u8 u8CopyPinId, u8 u8CopyPinMode)
 {
-	/* IF input pull up/down is used, some addtional config is needed */
 	u8 u8InputPull_UP_DOWN = 0;
 	if(u8CopyPinMode == INPUT_PULL_DOWN)
 	{
@@ -25,7 +24,7 @@ void GPIO_voidSetPinMode(u8 u8CopyPortId, u8 u8CopyPinId, u8 u8CopyPinMode)
 		u8InputPull_UP_DOWN = INPUT_PULL_UP;
 		u8CopyPinMode = 0b1000;
 	}
-	
+	asm("NOP");
 	switch (u8CopyPortId)
 	{
 	case GPIOA:
@@ -79,11 +78,11 @@ void GPIO_voidSetPinMode(u8 u8CopyPortId, u8 u8CopyPinId, u8 u8CopyPinMode)
 		}
 
 		/* Select INPUT is either pullDown or pullUp */
-		if (u8InputPull_UP_DOWN == INPUT_PULL_DOWN)
+		if (u8CopyPinMode == INPUT_PULL_DOWN)
 		{
 			CLR_BIT(GPIOB_ODR, u8CopyPinId);
 		}
-		else if (u8InputPull_UP_DOWN == INPUT_PULL_UP)
+		else if (u8CopyPinMode == INPUT_PULL_UP)
 		{
 			SET_BIT(GPIOB_ODR, u8CopyPinId);
 		}
@@ -111,11 +110,11 @@ void GPIO_voidSetPinMode(u8 u8CopyPortId, u8 u8CopyPinId, u8 u8CopyPinMode)
 		}
 
 		/* Select INPUT is either pullDown or pullUp */
-		if (u8InputPull_UP_DOWN == INPUT_PULL_DOWN)
+		if (u8CopyPinMode == INPUT_PULL_DOWN)
 		{
 			CLR_BIT(GPIOC_ODR, u8CopyPinId);
 		}
-		else if (u8InputPull_UP_DOWN == INPUT_PULL_UP)
+		else if (u8CopyPinMode == INPUT_PULL_UP)
 		{
 			SET_BIT(GPIOC_ODR, u8CopyPinId);
 		}

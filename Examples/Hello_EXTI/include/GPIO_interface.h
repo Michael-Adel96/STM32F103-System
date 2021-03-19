@@ -103,8 +103,8 @@ u8	 GPIO_u8GetPinValue(u8 u8CopyPortId,u8 u8CopyPinId);
 /*                                                EXTI_PORTB_PIN,                       			*/
 /*                                                EXTI_PORTC_PIN                          			*/
 /* Note 	  : RCC_AFIO_CLK must be Enabled before calling this function.				 			*/
-/* Output     : Void                                                                               */
-/* Scope      : Public                                                                             */
+/* Output     : Void                                                                               	*/
+/* Scope      : Public                                                                             	*/
 /****************************************************************************************************/
 void AFIO_voidEXTILineConfig(u8 u8CopyEXTILine, u8 u8CopyEXTIPort);
 
