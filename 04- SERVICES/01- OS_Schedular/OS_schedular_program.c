@@ -83,7 +83,7 @@ void OS_voidCreateTask(u8 Copy_u8TaskId, u16 Copy_u16Periodicity, void (*ptr) (v
 /*              Setting OS Tick Time is the main task of this functions.                           */
 /* Input      : Void                                                                               */
 /* Output     : Void                                                                               */
-/* Scope      : Public                                                                 			   */
+/* Scope      : Public                                                                             */
 /***************************************************************************************************/
 void OS_voidStartOS(void)
 {
@@ -98,7 +98,7 @@ void OS_voidStartOS(void)
 /*                               => Range: 0 -> NUMBER_OF_TASKS - 1 	                           */
 /*                               => NUMBER_OF_TASKS exists in OS_schedular_config.h file           */
 /* Output     : Void                                                                               */
-/* Scope      : Public                                                                 			   */
+/* Scope      : Public                                                                             */
 /***************************************************************************************************/
 void OS_voidSuspendTask(u8 Copy_u8TaskId)
 {
@@ -111,7 +111,7 @@ void OS_voidSuspendTask(u8 Copy_u8TaskId)
 /*                               => Range: 0 -> NUMBER_OF_TASKS - 1 	                           */
 /*                               => NUMBER_OF_TASKS exists in OS_schedular_config.h file           */
 /* Output     : Void                                                                               */
-/* Scope      : Public                                                                 			   */
+/* Scope      : Public                                                                             */
 /***************************************************************************************************/
 void OS_voidResumeTask(u8 Copy_u8TaskId)
 {
@@ -124,7 +124,7 @@ void OS_voidResumeTask(u8 Copy_u8TaskId)
 /*                               => Range: 0 -> NUMBER_OF_TASKS - 1 	                           */
 /*                               => NUMBER_OF_TASKS exists in OS_schedular_config.h file           */
 /* Output     : Void                                                                               */
-/* Scope      : Public                                                                 			   */
+/* Scope      : Public                                                                             */
 /***************************************************************************************************/
 void OS_voidDeleteTask(u8 Copy_u8TaskId)
 {
