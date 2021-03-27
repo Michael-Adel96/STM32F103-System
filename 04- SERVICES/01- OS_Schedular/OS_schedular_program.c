@@ -22,7 +22,7 @@ static Task OS_Tasks[NUMBER_OF_TASKS] = {NULL};
 /* Description: Core algorithm of OS which decides which task to run at every OS tick.             */
 /* Input      : Void                                                                               */
 /* Output     : Void                                                                               */
-/* Scope      : Private                                                                			   */
+/* Scope      : Private                                                                            */
 /***************************************************************************************************/
 static void OS_voidSchedular(void)
 {
@@ -68,7 +68,7 @@ static void OS_voidSchedular(void)
 /*                                     => Range: Not specified                                     */
 /*                              => Actual First delay = FIRST_DELAY_TICKS x OS_TICK_ACTUAL_DELAY   */
 /* Output     : Void                                                                               */
-/* Scope      : Public                                                                 			   */
+/* Scope      : Public                                                                             */
 /***************************************************************************************************/
 void OS_voidCreateTask(u8 Copy_u8TaskId, u16 Copy_u16Periodicity, void (*ptr) (void), u16 Copy_u16FirstDelay)
 {
