@@ -49,6 +49,9 @@ void STK_voidSetBusyWait(u32 Copy_u32Ticks)
     /* Check the input range */
     if (Copy_u32Ticks >= 0x00000001 && Copy_u32Ticks <= 0x00FFFFFF)
     {
+    	/* Clear the timer current value register and COUNTFLAG bit in the STK_CTRL */
+   	 	 STK_VAL = 0;
+
         /* Load the ticks value */
         STK_LOAD = Copy_u32Ticks;
 
@@ -90,6 +93,9 @@ void STK_voidSetIntervalSingle(u32 Copy_u32Ticks, void (*Copy_ptr)(void))
     /* Check the input range */
     if (Copy_u32Ticks >= 0x00000001 && Copy_u32Ticks <= 0x00FFFFFF)
     {
+    	/* Clear the timer current value register and COUNTFLAG bit in the STK_CTRL */
+   	 	STK_VAL = 0;
+
         /* Assign the passed function to ISR */
         STK_callBackFunc = Copy_ptr;
 
@@ -130,6 +136,9 @@ void STK_voidSetIntervalPeriodic(u32 Copy_u32Ticks, void (*Copy_ptr)(void))
     /* Check the input range */
     if (Copy_u32Ticks >= 0x00000001 && Copy_u32Ticks <= 0x00FFFFFF)
     {
+    	/* Clear the timer current value register and COUNTFLAG bit in the STK_CTRL */
+   	 	STK_VAL = 0;
+
         /* Assign the passed function to ISR */
         STK_callBackFunc = Copy_ptr;
 
